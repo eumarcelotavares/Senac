@@ -1,3 +1,10 @@
+//Crie os seguintes objetos:
+//        1 - Cadeira
+//        2 - Camisa
+//        3 - Tênis
+//        4 - Celular
+//        5 - Casa
+
 package aula241122.exercicioCriaObjetos;
 
 import aula241122.exercicioCriaObjetos.Cadeira;
@@ -21,7 +28,9 @@ public class Main {
 
         cadeiraEscritorio.cadeiraMetodo();
 
+        System.out.println(" ");
         System.out.println("**********************************************");
+        System.out.println(" ");
 
 
         Camisa camisaEsporte = new Camisa();
@@ -32,7 +41,9 @@ public class Main {
 
         camisaEsporte.camisaMetodo();
 
+        System.out.println(" ");
         System.out.println("**********************************************");
+        System.out.println(" ");
 
 
         Tenis TenisEsporte = new Tenis();
@@ -43,7 +54,9 @@ public class Main {
 
         TenisEsporte.tenisMetodo();
 
+        System.out.println(" ");
         System.out.println("**********************************************");
+        System.out.println(" ");
 
 
         Celular CelularSamsung = new Celular();
@@ -54,8 +67,9 @@ public class Main {
 
         CelularSamsung.celularMetodo();
 
+        System.out.println(" ");
         System.out.println("**********************************************");
-
+        System.out.println(" ");
 
         Casa minhaCasaMinhaVida = new Casa();
         System.out.println("Digite a QUANTIDADE de DORMITÓRIOS:");
@@ -64,8 +78,8 @@ public class Main {
         minhaCasaMinhaVida.metragem = entrada.nextInt();
 
         minhaCasaMinhaVida.casaMetodo();
-
+        System.out.println(" ");
         System.out.println("**********************************************");
-
+        System.out.println(" ");
     }
 }

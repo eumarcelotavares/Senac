@@ -1,5 +1,4 @@
 package aula241122.exercicioCriaObjetos;
-import aula241122.exercicioCriaObjetos.Main;
 
 public class Cadeira {
 
