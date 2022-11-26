@@ -3,20 +3,18 @@ import aula241122.exercicioPessoa.Main;
 
 public class Pessoa {
 
-    String nome = "null";
-    String nacionalidade = "null";
-    String endereco = "null";
-    int diaNasc = 0;
-    int diaAtual = 0;
-    int mesNasc = 0;
-
-    int mesAtual = 0;
-    int anoNasc = 0;
-
-    int anoAtual = 0;
-    int cpf = 0;
-    int identidade = 0;
-    int celular = 0;
+    public String nome = "null";
+    public String nacionalidade = "null";
+    public String endereco = "null";
+    public int diaNasc = 0;
+    public int diaAtual = 0;
+    public int mesNasc = 0;
+    public int mesAtual = 0;
+    public int anoNasc = 0;
+    public int anoAtual = 0;
+    public int cpf = 0;
+    public int identidade = 0;
+    public int celular = 0;
 
     public void pessoaMetodo() {
 
@@ -26,10 +24,11 @@ public class Pessoa {
 
     public void calculaIdadeMetodo() {
 
-        int calculaIdadeDia, calculaIdadeMes, calculaIdadeAno;
+        int calculaIdade, calculaIdadeDia, calculaIdadeMes, calculaIdadeAno;
 
-        calculaIdadeDia = diaNasc - this.diaAtual;
-
+        calculaIdadeDia = diaNasc - diaAtual;
+        calculaIdadeMes = mesNasc - mesAtual;
+        calculaIdadeAno = anoNasc - anoAtual;
 
     }
 

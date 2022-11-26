@@ -18,13 +18,14 @@ public class Main {
 
         System.out.println("Digite o DIA ATUAL: ");
         P1.diaAtual = entrada.nextInt();
-        System.out.println("Digite o MÊS ATUAL: ");
+        System.out.println("Digite o MÊS ATUAL (número): ");
         P1.mesAtual = entrada.nextInt();
         System.out.println("Digite o ANO ATUAL: ");
         P1.anoAtual = entrada.nextInt();
 
 
 
+        P1.calculaIdadeMetodo();
         P1.pessoaMetodo();
 
     }
