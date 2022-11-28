@@ -6,27 +6,92 @@
 
 package aula241122.exercicioPessoa;
 import aula241122.exercicioPessoa.Pessoa;
+import aula241122.exercicioPessoa.Aluno;
 
-import java.util.Scanner;
+import java.util.*;
 
 public class Main {
 
     public static void main(String[] args) {
-        Scanner entrada = new Scanner(System.in);
+        Scanner in = new Scanner(System.in);
 
-        Pessoa P1 = new Pessoa();
+        System.out.println("Qual é o seu NOME? ");
+        Pessoa.nome = in.nextLine();
 
-        System.out.println("Digite o DIA ATUAL: ");
-        P1.diaAtual = entrada.nextInt();
-        System.out.println("Digite o MÊS ATUAL (número): ");
-        P1.mesAtual = entrada.nextInt();
-        System.out.println("Digite o ANO ATUAL: ");
-        P1.anoAtual = entrada.nextInt();
+        System.out.println("Qual é a sua NACIONALIDADE? ");
+        Pessoa.nacionalidade = in.nextLine();
+
+        System.out.println("Qual é o seu ENDEREÇO? ");
+        Pessoa.endereco = in.nextLine();
+
+        System.out.println("Qual é o seu CPF? ");
+        Pessoa.cpf = in.nextInt();
+
+        System.out.println("Qual é a sua IDENTIDADE? ");
+        Pessoa.identidade = in.nextInt();
+
+        System.out.println("Qual é o seu CELULAR? ");
+        Pessoa.celular = in.nextInt();
+
+        System.out.println("Em qual DIA você nasceu? ");
+        Pessoa.diaNasc = in.nextInt();
+
+        if ((Pessoa.diaNasc <= 0) && (Pessoa.diaNasc > 31)) {
+            System.out.println("Dia Inválido!");
+        } else {
+            System.out.println("Em qual MÊS você nasceu? (em número) ");
+            Pessoa.mesNasc = in.nextInt();
+
+            if ((Pessoa.mesNasc <= 0) && (Pessoa.mesNasc > 12)) {
+                System.out.println("Mês inválido!");
+            } else {
+                System.out.println("Em qual ANO você nasceu? ");
+                Pessoa.anoNasc = in.nextInt();
+
+                if ((Pessoa.anoNasc <= 0) && (Pessoa.anoNasc > Pessoa.anoAtual)) {
+                    System.out.println("Ano Inválido");
+                } else {
+                    Pessoa.Nasc = Pessoa.anoNasc * 365;
+                    Pessoa.Nasc = Pessoa.Nasc + (Pessoa.mesNasc * 31);
+                    Pessoa.Nasc = Pessoa.Nasc + Pessoa.diaNasc;
+                    Pessoa.Atual = Pessoa.anoAtual * 365;
+                    Pessoa.Atual = Pessoa.Atual + (Pessoa.mesAtual * 31);
+                    Pessoa.Atual = Pessoa.Atual + Pessoa.diaAtual;
+
+                }
+
+                Aluno aluno1 = new Aluno();
+
+                aluno1.nome = Pessoa.nome;
+
+                System.out.println("Qual a MATRÍCULA do aluno(a)? " + Pessoa.nome);
+                aluno1.matricula = in.next();
+
+                System.out.println("Qual a PRIMEIRA DISCIPLINA do aluno(a)? " + Pessoa.nome);
+                aluno1.disciplinaUm = in.next();
+
+                System.out.println("Qual a SEGUNDA DISCIPLINA do aluno(a)? " + Pessoa.nome);
+                aluno1.disciplinaDois = in.next();
+
+                System.out.println("Qual a TERCEIRA DISCIPLINA do aluno(a)? " + Pessoa.nome);
+                aluno1.disciplinaTres = in.next();
 
 
+                Pessoa.pessoaMetodo();
 
-        P1.calculaIdadeMetodo();
-        P1.pessoaMetodo();
+                System.out.println(" ");
+                System.out.println("------------------------------------");
+                System.out.println(" ");
 
+                Pessoa.calculaIdadeMetodo();
+
+                System.out.println(" ");
+                System.out.println("------------------------------------");
+                System.out.println(" ");
+
+                Aluno.alunoMetodo();
+
+            }
+        }
     }
 }
