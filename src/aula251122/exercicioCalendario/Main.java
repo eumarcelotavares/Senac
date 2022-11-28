@@ -14,29 +14,29 @@ public class Main {
         int mesAtual = cal.get(Calendar.MONTH) + 1;
         int anoAtual = cal.get(Calendar.YEAR);
 
-        //recebendo a data de nascimento usuario
+        //recebendo a data de nascimento usuário
         Scanner in = new Scanner(System.in);
-        System.out.println("Dia em que você nasceu: ");
+        System.out.println("Em qual DIA você nasceu? ");
         int diaNasc = in.nextInt();
         if ((diaNasc<=0) && (diaNasc>31))
         {
-            System.out.println("Dia Invalido");
+            System.out.println("Dia Inválido!");
         }
         else
         {
-            System.out.println("Mes em que você nasceu: ");
+            System.out.println("Em qual MÊS você nasceu? (em número) ");
             int mesNasc = in.nextInt();
             if ((mesNasc<=0) && (mesNasc>12))
             {
-                System.out.println("Mes invalido");
+                System.out.println("Mês inválido!");
             }
             else
             {
-                System.out.println("Ano em que você nasceu: ");
+                System.out.println("Em qual ANO você nasceu? ");
                 int anoNasc = in.nextInt();
                 if ((anoNasc<=0) && (anoNasc>anoAtual))
                 {
-                    System.out.println("Ano Invalido");
+                    System.out.println("Ano Inválido");
                 }
                 else
                 {
