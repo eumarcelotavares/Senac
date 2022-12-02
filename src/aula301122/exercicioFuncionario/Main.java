@@ -32,7 +32,7 @@ public class Main {
         Func1.departamento = in.next();
 
         System.out.println("Qual é o SALÁRIO do funcionário? ");
-        Func1.salario = in.nextDouble();
+        Func1.salario = in.nextInt();
 
         System.out.println("Em qual DIA o funcionário entrou na empresa? ");
         Func1.diaEnt = in.nextInt();
@@ -60,13 +60,15 @@ public class Main {
                     Func1.Atual = Func1.Atual + Func1.diaAtual;
                     Func1.Dias = Func1.Atual - Func1.Ent;
 
+                    Func1.novoSalario = Func1.salario * (Func1.bonifica/100) + Func1.salario;
+
                 }
 
                 Func1.EntradaMetodo(); //chama o método
 
                 Func1.bonificacaoMetodo(10); //chama o método
 
-                Func1.salarioBonusMetodo(); //chama o método
+                Func1.novoSalarioMetodo();
 
             }
         }

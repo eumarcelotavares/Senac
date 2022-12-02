@@ -7,6 +7,7 @@ public class Metodos extends Funcionario {
 
 
 
+
     public static void EntradaMetodo() {
 
         System.out.println("O Funcionário " + nome + " tem " + Dias + " dias ou " + ((Atual - Ent) / 31) + " meses ou " + ((Atual - Ent) / 365) + " anos trabalhando em nossa empresa.");
@@ -23,17 +24,13 @@ public class Metodos extends Funcionario {
 
         }
 
-        bonificaPerc = bonifica/100;
-
     }
 
-    public static void salarioBonusMetodo() {
+    public  void novoSalarioMetodo() {
 
-        salarioBonus = salario * bonificaPerc + salario;
-        System.out.println("O novo salário do Funcionário " + nome + " é de: " + "R$ "+ salarioBonus);
+        System.out.println("O novo salário do Funcionário " + nome + " é de: " + "R$ "+ novoSalario);
 
     }
-
 
 }
 

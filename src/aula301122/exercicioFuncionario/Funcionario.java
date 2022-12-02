@@ -8,10 +8,8 @@ public class Funcionario {
 
    static String nome = "null";
    static String departamento = "null";
-   static Double salario;
-     static String dataEntrada = "null";
+   static int salario;
    static String RG = "null";
-
    static Calendar cal = GregorianCalendar.getInstance();
    static int diaAtual = cal.get(Calendar.DAY_OF_MONTH);
    static int mesAtual = cal.get(Calendar.MONTH) + 1;
@@ -22,9 +20,8 @@ public class Funcionario {
    static int Ent = 0;
    static int Atual = 0;
    static int Dias;
-   static Double salarioBonus;
-   static int bonificaPerc;
-
+   int bonifica = 10;
+   static int novoSalario;
 
 
 
